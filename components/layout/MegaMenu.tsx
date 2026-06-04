@@ -16,10 +16,10 @@ export default function MegaMenu({ items, teasers }: MegaMenuProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -6 }}
+      initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -6 }}
-      transition={{ duration: 0.16, ease: "easeOut" }}
+      exit={{ opacity: 0, y: -8, transition: { duration: 0.12, ease: "easeIn" } }}
+      transition={{ type: "spring", stiffness: 380, damping: 26 }}
       className="absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-100"
     >
       <div className="max-w-7xl mx-auto px-12 py-10">
@@ -73,7 +73,7 @@ export default function MegaMenu({ items, teasers }: MegaMenuProps) {
             <div className="flex flex-col gap-6">
               {teasers.map((teaser) => (
                 <Link key={teaser.href} href={teaser.href} className="group relative block">
-                  <div className="w-full aspect-video bg-gray-200" />
+                  <div className="w-full aspect-video bg-gray-200 rounded-br-[3.5rem]" />
                   <div className="absolute bottom-4 left-4 bg-white p-4 shadow-md">
                     <p className="text-xs text-gray-400 mb-1">{teaser.subtitle}</p>
                     <p className="text-sm font-bold text-gray-900 group-hover:text-gray-600 transition-colors">

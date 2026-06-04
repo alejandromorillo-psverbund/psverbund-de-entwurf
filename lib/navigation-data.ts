@@ -22,6 +22,7 @@ export type Brand = {
   shortLabel: string
   href: string
   accentColor: string
+  logo: string
 }
 
 export const brands: Brand[] = [
@@ -29,25 +30,29 @@ export const brands: Brand[] = [
     label: 'PS Kieswerke GmbH',
     shortLabel: 'Kieswerke',
     href: '/kieswerke',
-    accentColor: '#f59e0b',
+    accentColor: '#a8c200',
+    logo: '/logo-kieswerke-brand.png',
   },
   {
     label: 'PS Straßen und Tiefbau GmbH',
     shortLabel: 'Straßen & Tiefbau',
     href: '/strassen-und-tiefbau',
-    accentColor: '#3b82f6',
+    accentColor: '#eab308',
+    logo: '/logo-strassen.png',
   },
   {
     label: 'PS Infrabau GmbH',
     shortLabel: 'Infrabau',
     href: '/infrabau',
-    accentColor: '#10b981',
+    accentColor: '#f97316',
+    logo: '/logo-infrabau.png',
   },
   {
     label: 'PS Bauschutt GmbH',
     shortLabel: 'Bauschutt',
     href: '/bauschutt',
-    accentColor: '#ef4444',
+    accentColor: '#38bdf8',
+    logo: '/logo-bauschutt.png',
   },
 ]
 
